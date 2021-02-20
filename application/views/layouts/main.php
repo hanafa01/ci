@@ -9,6 +9,16 @@
 </head>
 <body>
     
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-9">
+            <?php $this->load->view($main_view); ?>
+        </div>
+    </div>
+</div>
 
 <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
 <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
