@@ -4,7 +4,7 @@ class Users extends CI_Controller{
 
     public function show($user_id){
         //$this->load->model('User_model');
-        $data['results'] = $this->User_model->get_users($user_id);
+        $data['results'] = $this->User_model->get_users($user_id, 'hana');
 
         // foreach($result as $object){
         //     echo $object->username."<br/>";
