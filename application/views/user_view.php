@@ -8,10 +8,10 @@
 </head>
 <body>
     <!-- <h1><?php echo $welcome ?></h1> -->
-    <!-- <?php foreach($results as $object):
+    <?php foreach($results as $object):
         echo $object->username . "<br/>";
-     endforeach; ?> -->
+     endforeach; ?>
 
-     <?php echo $results;?>
+     <!-- <?php echo $results;?> -->
 </body>
 </html>

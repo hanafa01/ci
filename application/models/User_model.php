@@ -2,7 +2,7 @@
 
 class User_model extends CI_Model{
 
-    public function get_users(){
+    public function get_users($user_id){
         // $config['hostname'] = 'localhost';
         // $config['username'] = 'root';
         // $config['password'] = '';
@@ -13,9 +13,15 @@ class User_model extends CI_Model{
         //$query = $this->db->get('users');
         //return $query->result(); //array of object
 
-        $query = $this->db->query("SELECT * FROM users");
+        //$query = $this->db->query("SELECT * FROM users");
         //return $query->num_rows(); // num of rows
-        return $query->num_fields(); // num of columns
+        //return $query->num_fields(); // num of columns
+
+
+        //select data based on parameters
+        $this->db->where('id', $user_id);
+        $query = $this->db->get('users');
+        return $query->result(); //array of object
 
 
     }
