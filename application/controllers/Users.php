@@ -15,6 +15,12 @@ class Users extends CI_Controller{
         $this->load->view('user_view', $data);
     }
 
+    public function insert(){
+        $username = "jaja";
+        $password = "jaja";
+        $this->User_model->create_user(['username' => $username, 'password' => $password]);
+    }
+
 }
 
 ?>
