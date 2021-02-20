@@ -14,7 +14,8 @@ class User_model extends CI_Model{
         //return $query->result(); //array of object
 
         $query = $this->db->query("SELECT * FROM users");
-        return $query->num_rows(); // num of rows
+        //return $query->num_rows(); // num of rows
+        return $query->num_fields(); // num of columns
 
 
     }
