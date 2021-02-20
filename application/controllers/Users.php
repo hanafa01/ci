@@ -23,10 +23,16 @@ class Users extends CI_Controller{
 
     public function update(){
         $id = 5;
-        
+
         $username = "kaja";
         $password = "jaja";
         $this->User_model->create_user(['username' => $username, 'password' => $password], $id);
+    }
+    
+
+    public function delete(){
+        $id = 6;
+        $this->User_model->delete_user($id);
     }
 
 }
