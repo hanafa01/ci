@@ -51,7 +51,7 @@ class Users extends CI_Controller{
             $password = $this->input->post('password');
             $user_id = $this->User_model->login_user($username, $password);
             if($user_id){
-                $user_data = array('user_id' => $user_id, 'username' => $username, 'logged_id' => true);
+                $user_data = array('user_id' => $user_id, 'username' => $username, 'logged_in' => true);
                 $this->session->set_userdata($user_data);
                 $this->session->set_flashdata('login_success', 'You are logged in!');
                 redirect('home/index');
@@ -61,6 +61,11 @@ class Users extends CI_Controller{
             }
         }
         // echo $this->input->post('username');
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect('home/index');
     }
 
 }
