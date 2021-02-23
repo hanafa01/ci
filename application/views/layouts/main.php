@@ -10,13 +10,9 @@
 <body>
     
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <?php $this->load->view('users/login_view');?>
-        </div>
-        <div class="col-md-9">
-            <?php $this->load->view($main_view); ?>
-        </div>
+    <?php $this->load->view($main_view); ?>
+    <div>
+        <?php $this->load->view('users/login_view');?>
     </div>
 </div>
 
