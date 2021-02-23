@@ -47,6 +47,10 @@ class Users extends CI_Controller{
             $this->form_validation->set_message();
             $this->session->set_flashdata($data);
             redirect('home');
+        }else{
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
+            $this->User_model->login_user($username, $password);
         }
         // echo $this->input->post('username');
     }

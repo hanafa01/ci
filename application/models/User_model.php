@@ -40,6 +40,18 @@ class User_model extends CI_Model{
         $this->db->delete('users');
     }
 
+    public function login_user($username, $password){
+        //$this->db->where(['username' => $username, $password => 'password']);
+        $this->db->where('username', $username);
+        $this->db->where('password', $password);
+        $query = $this->db->get('users');
+        if($query->num_rows() == 1){
+            return $query->row(0)->id; //return the id of the user, 0 is the first column of the row
+        }else{
+            return false;
+        }
+    }
+
 }
 
 ?>
