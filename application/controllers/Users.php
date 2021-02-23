@@ -44,13 +44,21 @@ class Users extends CI_Controller{
 
         if($this->form_validation->run() == FALSE){
             $data = array('errors' => validation_errors());
-            $this->form_validation->set_message();
             $this->session->set_flashdata($data);
             redirect('home');
         }else{
             $username = $this->input->post('username');
             $password = $this->input->post('password');
-            $this->User_model->login_user($username, $password);
+            $user_id = $this->User_model->login_user($username, $password);
+            if($user_id){
+                $user_data = array('user_id' => $user_id, 'username' => $username, 'logged_id' => true);
+                $this->session->set_userdata($user_data);
+                $this->session->set_flashdata('login_success', 'You are logged in!');
+                redirect('home/index');
+            }else{
+                $this->session->set_flashdata('login_failed', 'You are not logged in!');
+                redirect('home/index');
+            }
         }
         // echo $this->input->post('username');
     }
