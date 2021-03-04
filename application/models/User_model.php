@@ -26,8 +26,13 @@ class User_model extends CI_Model{
 
     }
 
-    public function create_user($data){
-        $this->db->insert('users', $data);
+    public function create_user(){
+
+        $options = ['cost' => 12]; 
+        $encrypted_pass = password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options);
+
+        $data = array('first_name' => $this->input->post('first_name') , 'last_name' => $this->input->post('last_name'), 'email' => $this->input->post('email'), 'username' => $this->input->post('username'), 'password' => $encrypted_pass);
+        return $this->db->insert('users', $data);
     }
 
     public function update_user($data, $id){
@@ -43,9 +48,10 @@ class User_model extends CI_Model{
     public function login_user($username, $password){
         //$this->db->where(['username' => $username, $password => 'password']);
         $this->db->where('username', $username);
-        $this->db->where('password', $password);
         $query = $this->db->get('users');
-        if($query->num_rows() == 1){
+        $db_password = $query->row(2)->password;
+
+        if(password_verify($password, $db_password)){
             return $query->row(0)->id; //return the id of the user, 0 is the first column of the row
         }else{
             return false;
