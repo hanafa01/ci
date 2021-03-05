@@ -28,10 +28,13 @@
 </nav>
  
 <div class="container">
-    <?php $this->load->view($main_view); ?>
-    <hr>
-    <div>
+    <div class="row">
+      <div class="col-md-5">
         <?php $this->load->view('users/login_view');?>
+      </div>
+      <div class="col-md-7">
+        <?php $this->load->view($main_view); ?> 
+      </div>
     </div>
 </div>
 
