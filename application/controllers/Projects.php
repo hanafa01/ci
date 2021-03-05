@@ -11,9 +11,16 @@ class Projects extends CI_Controller{
     }
 
     public function index(){
+        $data['projects'] = $this->Project_model->get_projects();
         $data['main_view'] = "projects/index";
         $this->load->view('layouts/main', $data);
     }
+
+    public function display(){
+        $data['main_view'] = "projects/display";
+        $this->load->view('layouts/main', $data);
+    }
+
 
 }
 

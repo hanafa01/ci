@@ -24,15 +24,22 @@
         <a class="nav-link" href="<?= base_url() ?>users/register">REGISTER</a>
       </li>
     </ul>
+    <?php if($this->session->userdata('logged_in')): ?>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?= base_url(); ?>users/logout">Logout</a>
+      </li>
+    </ul>
+    <?php endif; ?>
   </div>
 </nav>
  
 <div class="container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-4">
         <?php $this->load->view('users/login_view');?>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-8">
         <?php $this->load->view($main_view); ?> 
       </div>
     </div>
