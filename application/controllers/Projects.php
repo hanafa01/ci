@@ -19,6 +19,7 @@ class Projects extends CI_Controller{
     }
 
     public function display($projectid){
+        $data['completed_tasks'] = $this->Project_model->get_project_tasks($projectid, true);
         $data['project_data'] = $this->Project_model->get_project($projectid);
         $data['main_view'] = "projects/display";
         $this->load->view('layouts/main', $data);
