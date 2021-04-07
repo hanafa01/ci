@@ -37,7 +37,8 @@ class Tasks extends CI_Controller{
             $data['main_view'] = 'tasks/edit_task';
             $this->load->view('layouts/main', $data);
         }else{
-            $data = array('project_id' => $this->input->post('project_id'), 'task_name' => $this->input->post('task_name'), 'task_body' => $this->input->post('task_body'), 'due_date' => $this->input->post('due_date'));
+            $project_id = $this->Task_model->get_task_project_id($task_id);
+            $data = array('project_id' => $project_id, 'task_name' => $this->input->post('task_name'), 'task_body' => $this->input->post('task_body'), 'due_date' => $this->input->post('due_date'));
             if($this->Task_model->edit_task($task_id,$data)){
                 $this->session->set_flashdata('success_message', 'The Task has been updated successfully');
                 redirect('projects/index');
@@ -45,6 +46,12 @@ class Tasks extends CI_Controller{
         }
     }
 
+    public function delete($project_id, $task_id){
+        if($this->Task_model->delete_task($task_id)){
+            $this->session->set_flashdata('success_message', 'The Task has been deleted');
+            redirect('projects/display/'.$project_id);
+        }
+    }
 }
 
 ?>
