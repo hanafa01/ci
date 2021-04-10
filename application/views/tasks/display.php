@@ -21,6 +21,8 @@
             </td>
             <td><?= $task->task_body; ?></td>
             <td><?= $task->date_created; ?></td>
+            <td><a href="<?php echo base_url(); ?>tasks/mark_complete/<?php echo $task->id; ?>">Mark Complete</a></td>
+            <td><a href="<?php echo base_url(); ?>tasks/mark_incomplete/<?php echo $task->id; ?>">Mark Incomplete</a></td>
         </tr>
     </tbody>
 </table>

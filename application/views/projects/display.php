@@ -1,4 +1,17 @@
 <div class="col-md-9">
+
+    <?php if($this->session->flashdata('success_message')): ?>
+    <div class="alert alert-success">
+            <?php echo $this->session->flashdata('success_message'); ?>
+    </div>
+    <?php endif;?>
+
+    <?php if($this->session->flashdata('error_message')): ?>
+    <div class="alert alert-danger">
+            <?php echo $this->session->flashdata('error_message'); ?>
+    </div>
+    <?php endif;?>
+
     <h1>Project Name: <?= $project_data->project_name; ?></h1>
     <p>Date Created: <?= $project_data->date_created; ?></p>
     <h3>Description:</h3>

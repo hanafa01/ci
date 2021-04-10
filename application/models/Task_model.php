@@ -39,6 +39,22 @@ class Task_model extends CI_Model{
 
         return true;
     }
+
+    public function mark_complete($taskid){   //0 complete
+        $this->db->set('status', 0);
+        $this->db->where('id', $taskid);
+        $this->db->update('tasks');
+
+        return true;
+    }
+
+    public function mark_incomplete($taskid){
+        $this->db->set('status', 1);
+        $this->db->where('id', $taskid);
+        $this->db->update('tasks');
+
+        return true;
+    }
 }
 
 ?>

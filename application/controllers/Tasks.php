@@ -52,6 +52,22 @@ class Tasks extends CI_Controller{
             redirect('projects/display/'.$project_id);
         }
     }
+
+    public function mark_complete($id){ 
+        if($this->Task_model->mark_complete($id)){
+            $projectid = $this->Task_model->get_task_project_id($id);
+            $this->session->set_flashdata('success_message','This task has been completed');
+            redirect('projects/display/'.$projectid);
+        }
+    }
+
+    public function mark_incomplete($id){ 
+        if($this->Task_model->mark_incomplete($id)){
+            $projectid = $this->Task_model->get_task_project_id($id);
+            $this->session->set_flashdata('error_message','This task has marked as incompleted');
+            redirect('projects/display/'.$projectid);
+        }
+    }
 }
 
 ?>
