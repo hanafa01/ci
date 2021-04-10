@@ -35,3 +35,24 @@
     </tbody>
 </table>
 <?php endif; ?>
+
+<?php if(isset($my_tasks)):?>
+<h1>Projects</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Task Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($my_tasks as $task): ?>
+        <tr>
+            <td><?= $task->task_name ?></td>
+            <td><?= $task->task_body ?></td>
+            <td><a href="<?= base_url(); ?>tasks/display/<?php echo $task->id ?>">View</a></td>
+        </tr>    
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<?php endif; ?>
