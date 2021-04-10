@@ -4,8 +4,18 @@
     <h3>Description:</h3>
     <p><?= $project_data->project_body; ?></p>
 
+    <h3>Active Tasks</h3>
+    <?php if($not_completed_tasks): ?>
+            <ul>
+                <?php foreach($not_completed_tasks as $task): ?>
+                    <li><a href="<?php echo base_url(); ?>tasks/display/<?php echo $task->task_id;?>"><?php echo $task->task_name; ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+    <?php else: ?>
+        <p>You have not tasks pending.</p>
+    <?php endif; ?>
 
-    <h3>Tasks</h3>
+    <h3>Completed Tasks</h3>
     <?php if($completed_tasks): ?>
             <ul>
                 <?php foreach($completed_tasks as $task): ?>
