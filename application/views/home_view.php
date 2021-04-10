@@ -29,7 +29,7 @@
         <tr>
             <td><?= $project->project_name ?></td>
             <td><?= $project->project_body ?></td>
-            <td><a href="<?= base_url(); ?>projects">View</a></td>
+            <td><a href="<?= base_url(); ?>projects/display/<?php echo $project->id ?>">View</a></td>
         </tr>    
         <?php endforeach; ?>
     </tbody>
