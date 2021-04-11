@@ -1,28 +1,18 @@
-<h1>Task For: <?= $project_name; ?></h1>
+<div class="col-md-9">
+    <h1><?= $task->task_name; ?></h1>
+    <p>Project Name: <?= $project_name; ?></p>
+    <p>Created: <?= $task->date_created; ?></p>
+    <p>Due on: <?= $task->due_date; ?></p>
+    <h4>Description: </h4>
+    <p class="task_description"><?= $task->task_body; ?></p>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Task Name</th>
-            <th>Task Description</th>
-            <th>Date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <div class="task-name">
-                    <?= $task->task_name; ?>
-                </div>
-                <div class="task-actions">
-                    <a href="<?= base_url(); ?>tasks/edit/<?= $task->id; ?>">Edit</a>
-                    <a href="<?= base_url(); ?>tasks/delete/<?= $task->project_id; ?>/<?= $task->id; ?>">Delete</a>
-                </div>
-            </td>
-            <td><?= $task->task_body; ?></td>
-            <td><?= $task->date_created; ?></td>
-            <td><a href="<?php echo base_url(); ?>tasks/mark_complete/<?php echo $task->id; ?>">Mark Complete</a></td>
-            <td><a href="<?php echo base_url(); ?>tasks/mark_incomplete/<?php echo $task->id; ?>">Mark Incomplete</a></td>
-        </tr>
-    </tbody>
-</table>
+<div class="col-md-3 float-right mt-2 mb-3">
+    <h6>Tasks Actions</h6>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="<?= base_url(); ?>tasks/edit/<?= $task->id; ?>">Edit</a></li>
+        <li class="list-group-item"><a href="<?= base_url(); ?>tasks/delete/<?= $task->project_id; ?>/<?= $task->id; ?>">Delete</a></li>
+        <li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/mark_complete/<?php echo $task->id; ?>">Mark Complete</a></li>
+        <li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/mark_incomplete/<?php echo $task->id; ?>">Mark Incomplete</a></li>
+    </ul>
+</div>

@@ -16,6 +16,25 @@
 </div>
 
 <?php if(isset($my_projects)):?>
+
+
+<div class="card">
+    <div class="card-header">Projects</div>
+    <div class="card-body">
+        <ul class="list-group">
+            <?php foreach($my_projects as $project): ?>
+            <li class="list-group-item">
+                <a href="<?= base_url(); ?>projects/display/<?php echo $project->id ?>">
+                <?= $project->project_name ?>: 
+                <?= $project->project_body ?>
+                </a>
+            </li>    
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+
+
 <h1>Projects</h1>
 <table class="table table-bordered">
     <thead>
