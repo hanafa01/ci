@@ -1,4 +1,4 @@
-<h1>Task Display View</h1>
+<h1>Task For: <?= $project_name; ?></h1>
 
 <table class="table">
     <thead>
