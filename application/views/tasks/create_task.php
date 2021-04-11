@@ -27,3 +27,8 @@
     </div>
     <?php echo form_close();?>
 </div>
+
+<script>
+    webshims.setOptions('forms-ext', {types: 'date'});
+    webshims.polyfill('forms forms-ext');
+</script>
