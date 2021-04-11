@@ -37,7 +37,7 @@
 <?php endif; ?>
 
 <?php if(isset($my_tasks)):?>
-<h1>Projects</h1>
+<h1>Tasks</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
