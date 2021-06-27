@@ -24,8 +24,9 @@ class Tasks extends CI_Controller{
         }else{
             $data = array('project_id' => $project_id, 'task_name' => $this->input->post('task_name'), 'task_body' => $this->input->post('task_body'), 'due_date' => $this->input->post('due_date'));
             if($this->Task_model->create_task($data)){
-                $this->session->set_flashdata('success_message', 'The Task has been created successfully');
-                redirect('projects/index');
+                customFlash('The Task has been created successfully','projects/index', true);
+                // $this->session->set_flashdata('success_message', 'The Task has been created successfully');
+                // redirect('projects/index');
             }
         }
     }
@@ -42,32 +43,36 @@ class Tasks extends CI_Controller{
             $project_id = $this->Task_model->get_task_project_id($task_id);
             $data = array('project_id' => $project_id, 'task_name' => $this->input->post('task_name'), 'task_body' => $this->input->post('task_body'), 'due_date' => $this->input->post('due_date'));
             if($this->Task_model->edit_task($task_id,$data)){
-                $this->session->set_flashdata('success_message', 'The Task has been updated successfully');
-                redirect('projects/index');
+                customFlash('The Task has been updated successfully','projects/index', true);
+                // $this->session->set_flashdata('success_message', 'The Task has been updated successfully');
+                // redirect('projects/index');
             }
         }
     }
 
     public function delete($project_id, $task_id){
         if($this->Task_model->delete_task($task_id)){
-            $this->session->set_flashdata('success_message', 'The Task has been deleted');
-            redirect('projects/display/'.$project_id);
+            customFlash('The Task has been deleted','projects/display/'.$project_id, true);
+            // $this->session->set_flashdata('success_message', 'The Task has been deleted');
+            // redirect('projects/display/'.$project_id);
         }
     }
 
     public function mark_complete($id){ 
         if($this->Task_model->mark_complete($id)){
             $projectid = $this->Task_model->get_task_project_id($id);
-            $this->session->set_flashdata('success_message','This task has been completed');
-            redirect('projects/display/'.$projectid);
+            customFlash('This task has been completed','projects/display/'.$projectid, true);
+            // $this->session->set_flashdata('success_message','This task has been completed');
+            // redirect('projects/display/'.$projectid);
         }
     }
 
     public function mark_incomplete($id){ 
         if($this->Task_model->mark_incomplete($id)){
             $projectid = $this->Task_model->get_task_project_id($id);
-            $this->session->set_flashdata('error_message','This task has marked as incompleted');
-            redirect('projects/display/'.$projectid);
+            customFlash('This task has marked as incompleted','projects/display/'.$projectid, false);
+            // $this->session->set_flashdata('error_message','This task has marked as incompleted');
+            // redirect('projects/display/'.$projectid);
         }
     }
 }

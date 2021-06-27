@@ -5,8 +5,9 @@ class Projects extends CI_Controller{
     public function  __construct(){
         parent::__construct();
         if(!$this->session->userdata('logged_in')){
-            $this->session->set_flashdata('error_message', 'Sorry You have to login in order to see the projects page.');
-            redirect('/');
+            customFlash('Sorry You have to login in order to see the projects page.','/', false);
+            // $this->session->set_flashdata('error_message', 'Sorry You have to login in order to see the projects page.');
+            // redirect('/');
         }
     }
 
@@ -36,8 +37,9 @@ class Projects extends CI_Controller{
         }else{
             $data = array('user_id' => $this->session->userData('user_id'), 'project_name' => $this->input->post('project_name'), 'project_body' => $this->input->post('project_body'));
             if($this->Project_model->create_project($data)){
-                $this->session->set_flashdata('success_message', 'The Project has been created');
-                redirect("projects/index");
+                customFlash('The Project has been created','projects/index', true);
+                // $this->session->set_flashdata('success_message', 'The Project has been created');
+                // redirect("projects/index");
             }
         }
     }
@@ -53,16 +55,18 @@ class Projects extends CI_Controller{
         }else{
             $data = array('user_id' => $this->session->userData('user_id'), 'project_name' => $this->input->post('project_name'), 'project_body' => $this->input->post('project_body'));
             if($this->Project_model->edit_project($projectid, $data)){
-                $this->session->set_flashdata('success_message', 'The Project has been Updated');
-                redirect("projects/index");
+                customFlash('The Project has been Updated','projects/index', true);
+                // $this->session->set_flashdata('success_message', 'The Project has been Updated');
+                // redirect("projects/index");
             }
         }
     }
 
     public function delete($projectid){
         $this->Project_model->delete_project($projectid);
-        $this->session->set_flashdata('success_message', 'The Project has been Deleted');
-        redirect("projects/index");
+        customFlash('The Project has been Deleted','projects/index', true);
+        // $this->session->set_flashdata('success_message', 'The Project has been Deleted');
+        // redirect("projects/index");
         
     }
 
