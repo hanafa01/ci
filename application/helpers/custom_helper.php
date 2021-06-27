@@ -11,3 +11,14 @@ function customFlash($value, $redirectURL, $isSuccess){
     }
     redirect($redirectURL);
 }
+
+function checkFlash(){
+    $CI = get_instance();
+    $CI->load->library('session');
+    if($CI->session->flashdata('error_message') || $CI->session->flashdata('success_message')){
+        $data['success_message'] = $CI->session->flashdata('success_message');
+        $data['error_message'] = $CI->session->flashdata('error_message');
+        $CI->load->view('errors/customError',$data);
+    }
+    
+}
