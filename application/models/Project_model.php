@@ -35,6 +35,13 @@ class Project_model extends CI_Model{
         return $query->result();
     }
 
+    public function get_projects_of_user_with_pagination($userid, $start, $limit){
+        $this->db->where('user_id', $userid);
+        $this->db->limit($limit, $start);
+        $query = $this->db->get('projects');
+        return $query->result();
+    }
+
     public function get_project_info($projectid){
         $this->db->where('id', $projectid);
         return $this->db->get('projects')->row();

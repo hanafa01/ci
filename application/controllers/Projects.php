@@ -13,9 +13,54 @@ class Projects extends CI_Controller{
 
     public function index(){
         $user_id = $this->session->userdata('user_id');
-        $data['projects'] = $this->Project_model->get_projects_of_user($user_id);
+        // $data['projects'] = $this->Project_model->get_projects_of_user($user_id);
         // $data['projects'] = $this->Project_model->get_projects();   //all products with different users
         $data['main_view'] = "projects/index";
+
+        $this->load->library('pagination');
+        $config['base_url'] = 'http://localhost/ci/index.php/projects/index/';
+        $config['total_rows'] = count($this->Project_model->get_projects_of_user($user_id));
+        $config['per_page'] = 2;
+        $config["uri_segment"] = 3;
+		$config["use_page_numbers"] = TRUE;
+        
+        $config["full_tag_open"] = '<ul class="pagination">';
+		$config["full_tag_close"] = '</ul>';
+
+        $config['first_tag_open'] = '<li class="pl-1 pr-1 m-2" style="border: 1px solid violet">';
+        $config['first_tag_close'] = '</li>';
+
+        $config["last_tag_open"] = '<li class="pl-1 pr-1 m-2" style="border: 1px solid pink">';
+		$config["last_tag_close"] = '</li>';
+
+        $config['next_link'] = '&gt;';
+		$config["next_tag_open"] = '<li class="pl-1 pr-1 m-2" style="border: 1px solid green">';
+		$config["next_tag_close"] = '</li>';
+
+        $config["prev_link"] = "&lt;";
+		$config["prev_tag_open"] = "<li class='pl-1 pr-1 m-2' style='border: 1px solid #EB5757'>";
+		$config["prev_tag_close"] = "</li>";
+        
+        $config["cur_tag_open"] = "<li class='pl-1 pr-1 m-2' style='border: 1px solid #000'><a style='font-weight: bold; color: black' href='#'>";
+		$config["cur_tag_close"] = "</a></li>";
+
+		$config["num_tag_open"] = "<li class='pl-1 pr-1 m-2' style='border: 1px solid blue'>";
+		$config["num_tag_close"] = "</li>";
+		$config["num_links"] = 3;
+
+        $config['first_link'] = 'First';
+        $config['last_link'] = 'Last';
+
+        $this->pagination->initialize($config);
+        $data['pagination'] = $this->pagination->create_links();
+
+        $page = $this->uri->segment(3);
+        if(!isset($page)){
+            $page = 1;    
+        }
+        $start = ($page - 1) * $config["per_page"];
+
+        $data['projects'] = $this->Project_model->get_projects_of_user_with_pagination($user_id, $start, $config['per_page']);
         $this->load->view('layouts/main', $data);
     }
 

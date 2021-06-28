@@ -23,3 +23,5 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<?php echo $pagination; ?>
