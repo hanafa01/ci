@@ -54,5 +54,25 @@
 
 <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
 <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+
+<script>
+function updateCartQty(value, cartid){
+  $.ajax({
+    url: "<?php echo base_url(); ?>cart/updateItemQty",
+    method: 'POST',
+    data: {qty: value.value, cartid:cartid}, 
+    success: function(result){
+      if(result){
+        location.reload();
+      }else{
+        alert('error');
+      }
+      // console.log(result);
+    }
+  });
+}
+
+
+</script>
 </body>
 </html>

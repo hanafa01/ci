@@ -14,7 +14,7 @@
         <tr>
             <td><?= $product->name ?></td>
             <td><?= $product->price ?></td>
-            <td><a>Add to Cart</a></td>
+            <td><a href="<?php echo base_url() ?>products/addToCart/<?php echo $product->id; ?>">Add to Cart</a></td>
         </tr>    
         <?php endforeach; ?>
     </tbody>
