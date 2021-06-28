@@ -25,6 +25,9 @@
         <a class="nav-link" href="<?= base_url() ?>projects/index">PROJECTS</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="<?= base_url() ?>products/index">PRODUCTS</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?= base_url() ?>users/register">REGISTER</a>
       </li>
     </ul>
