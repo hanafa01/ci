@@ -1,0 +1,6 @@
+This project can see all projects added by a user, 
+login
+register
+logout
+view projects
+add/edit/delete project
