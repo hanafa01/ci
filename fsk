@@ -1,0 +1,275 @@
+[33mcommit 95869bbb3fa13ec53554547d9547d916060f431d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Dec 4 00:05:20 2022 +0300
+
+    sql and note about peoject
+
+[33mcommit a7d49ada3b57594dfc0e60989172bca21981479f[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Apr 11 15:03:51 2021 +0300
+
+    webshim firefox date not displaying
+
+[33mcommit 1e036e7f197400f37ab220c22cb65e9b9e8bd922[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Apr 11 12:44:29 2021 +0300
+
+    set value in form to display input field again if error instead of rewriting it
+
+[33mcommit fca1827ee342eda0d5986803d62cdd80b5421669[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Apr 11 12:40:49 2021 +0300
+
+    styling
+
+[33mcommit ceca861d539620d8a5c14a9ebc595686e4f7ffb0[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Apr 11 11:59:55 2021 +0300
+
+    background color and displying project name in the task page
+
+[33mcommit cd51ace6e6d04e0522feb43e2bf122fdca040e39[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Apr 11 10:46:22 2021 +0300
+
+    just change the title name
+
+[33mcommit 167707800ad64cde4583b6288dcf924ee374f9ae[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Apr 10 23:26:42 2021 +0300
+
+    get tasks of user in home page
+
+[33mcommit e9cdeab024d02fd09a1f757fad6b91fd087e7249[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Apr 10 22:59:15 2021 +0300
+
+    mark as complete and mark as incomplete tasks
+
+[33mcommit 359249ff76e2bf4641b19f11fce8e8be07f8e29c[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Apr 10 22:32:34 2021 +0300
+
+    diplay not and completed tasks
+
+[33mcommit 0f796ebf95c4670df6e202a6afdb2ed5dfe8313c[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Apr 10 22:24:46 2021 +0300
+
+    change the route
+
+[33mcommit 96e55f279490790c41813f543a066778d6050e2c[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Wed Apr 7 15:35:30 2021 +0300
+
+    fix on edit and delete task
+
+[33mcommit 41f2b5218e3d819244df6d335f07ea29515e50d7[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Mar 27 23:46:59 2021 +0300
+
+    joining
+
+[33mcommit e98d3e79781c2914fdf8fed84670379f10eb7368[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Mar 27 23:10:12 2021 +0300
+
+    tasks
+
+[33mcommit d1a933a2ff1add319085f91ad886a719bd78ceb9[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Thu Mar 11 01:09:12 2021 +0300
+
+    all about projects
+
+[33mcommit 0bf75687b9a9d3d0927ac9ac726f3a68371ed59c[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Mar 6 00:18:34 2021 +0300
+
+    displaying projects
+
+[33mcommit 2a6c78d1b12aa9d404e1c9477da69a744a6d5169[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Fri Mar 5 15:14:14 2021 +0300
+
+    access to projects page
+
+[33mcommit 8828933e145f4c2a918b5d3a4f0b402191446421[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Fri Mar 5 15:00:04 2021 +0300
+
+    add projects view
+
+[33mcommit 45463f12086f12a295b890849d714207e12f1c12[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Fri Mar 5 02:14:44 2021 +0300
+
+    user registration
+
+[33mcommit 1f6055b6d27a082aa3e8b707010e9d11939ed752[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Fri Mar 5 01:45:38 2021 +0300
+
+    register view and nav
+
+[33mcommit cc2648414e199207a099bc40912e6fb49a70bbd1[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Wed Feb 24 00:50:43 2021 +0300
+
+    create admin view
+
+[33mcommit 93d6d86fec6d221113fad7db40ce8c77f0ed6246[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Wed Feb 24 00:38:17 2021 +0300
+
+    about logout
+
+[33mcommit bf71b16fc74274af5382d167d8216b7018c3a664[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Wed Feb 24 00:18:14 2021 +0300
+
+    setting up notifications if logged in or no from database
+
+[33mcommit f46d0964e804d9bd248d11dbbc9904d1a383b8ea[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Wed Feb 24 00:03:27 2021 +0300
+
+    creating login user method in the user model
+
+[33mcommit 6ace4fc33ccaa7dafc4855185c73bdb97173436e[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Tue Feb 23 23:56:09 2021 +0300
+
+    ... form validation
+
+[33mcommit 230fc7a21ffeade5d739fc6b40ed65691949a3c0[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 01:24:31 2021 +0300
+
+    put the login title on main view
+
+[33mcommit a2058e2f06cb72c07619d47f358a7936b0bccaf8[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:36:17 2021 +0300
+
+    creating main file structure and loading main content
+
+[33mcommit 643900b54461c324091b3fc81fc3897f103d3be0[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:30:23 2021 +0300
+
+    configure the base_url
+
+[33mcommit 26601e2a517132acb827b7856fbb44838f7c2d7a[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:29:54 2021 +0300
+
+    add main template and configure the base_url
+
+[33mcommit 970ded923a7b0d880edbad86fd95719ed52d9e37[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:20:25 2021 +0300
+
+    add assets
+
+[33mcommit 625bb2b0b783a27ae7fccb86ec10cfb985a12f51[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:13:06 2021 +0300
+
+    delete data
+
+[33mcommit 155be59603aa060e245e8e8207b649ab9e6ad6f7[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:06:06 2021 +0300
+
+    update data
+
+[33mcommit 6ef9dbf558727d47aa5fd1dc155743f661529304[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sun Feb 21 00:02:08 2021 +0300
+
+    insert data
+
+[33mcommit 9d2cdee4e3103753df8c1a4f1059d52e862203b7[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:57:36 2021 +0300
+
+    conditions in our queries where id 1 and username hana
+
+[33mcommit f235ab271683333937bf7371c8265ff77a92eaa1[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:26:32 2021 +0300
+
+    selecting data in the db based on parameters (where)
+
+[33mcommit afb46812875447e50defbd470833a3317ffdde8f[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:19:21 2021 +0300
+
+    return nb of columns
+
+[33mcommit 203b78f4b37853d58886f04df7ef0dc5d34c5f89[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:18:21 2021 +0300
+
+    return nb of rows
+
+[33mcommit f976f9a622c62159eaf1239785695dd3c21e4921[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:15:39 2021 +0300
+
+    pass data to a view from database
+
+[33mcommit 7ada65097fbf34e29d58ed70c9ac80ea0a7903e9[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:12:21 2021 +0300
+
+    pass static data to a view
+
+[33mcommit e738dbd99242e5841a121cef68b61f6046954f58[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 23:06:52 2021 +0300
+
+    processing a result from a model in a controller
+
+[33mcommit 686dd876ce7f54009da89e38640e833fd679f487[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:59:46 2021 +0300
+
+    second  method to connect to db and get the users
+
+[33mcommit 2014cf95b81e2831fdc82fd59069ea78bdbfd158[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:56:07 2021 +0300
+
+    first method to connect to db
+
+[33mcommit 6ae049d3a8bbc48b3194a455b8517dca7a5941ab[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:53:03 2021 +0300
+
+    second method by auto loading model
+
+[33mcommit fbb7d2231ea031551d6f5977c27a09e412797537[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:51:59 2021 +0300
+
+    first method to call the model on controller manually line 6 users controller
+
+[33mcommit 5eece74d4bad68b1f3aedb92e7a57a7fc07d2982[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:45:56 2021 +0300
+
+    create a model and database for user
+
+[33mcommit 33acaea184d87534c74346fce9dd8af319e475a5[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:44:02 2021 +0300
+
+    create custom view
+
+[33mcommit 2fdadab45ca9309dcbddc9c7e1627ff705971620[m
+Author: hanafa01 <hana_fakhouri@hotmail.com>
+Date:   Sat Feb 20 22:41:06 2021 +0300
+
+    first commit
