@@ -1,16 +1,6 @@
 <h1>Projects</h1>
 
-<?php if($this->session->flashdata('success_message')): ?>
-<div class="alert alert-success">
-        <?php echo $this->session->flashdata('success_message'); ?>
-</div>
-<?php endif;?>
-
-<?php if($this->session->flashdata('error_message')): ?>
-<div class="alert alert-danger">
-        <?php echo $this->session->flashdata('error_message'); ?>
-</div>
-<?php endif;?>
+<?php echo checkFlash(); ?>
 
 <div class="float-right">
     <a href="<?php echo base_url(); ?>projects/create" class="btn btn-primary">Create</a>
@@ -33,3 +23,5 @@
         <?php endforeach; ?>
     </tbody>
 </table>
+
+<?php echo $pagination; ?>

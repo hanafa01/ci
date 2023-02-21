@@ -49,8 +49,9 @@ class Users extends CI_Controller{
             $this->load->view('layouts/main', $data);
         }else{
             if($this->User_model->create_user()){
-                $this->session->set_flashdata('success_message', 'User Has been Registered');
-                redirect('home/index');
+                customFlash('User Has been Registered','home/index', true);
+                // $this->session->set_flashdata('success_message', 'User Has been Registered');
+                // redirect('home/index');
             }else{
                  
             }
@@ -76,14 +77,11 @@ class Users extends CI_Controller{
             if($user_id){
                 $user_data = array('user_id' => $user_id, 'username' => $username, 'logged_in' => true);
                 $this->session->set_userdata($user_data);
-                $this->session->set_flashdata('success_message', 'You are logged in!');
-
-                //$data['main_view'] = "admin_view";
-                //$this->load->view('layouts/main', $data);
-                 redirect('home/index');
+                customFlash('You are logged in!','home/index', true);
             }else{
-                $this->session->set_flashdata('error_message', 'You are not logged in!');
-                redirect('home/index');
+                customFlash('You are not logged in!','home/index', false);
+                // $this->session->set_flashdata('error_message', 'You are not logged in!');
+                // redirect('home/index');
             }
         }
         // echo $this->input->post('username');
